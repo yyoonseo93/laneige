@@ -1,0 +1,80 @@
+{
+    "container1" : [
+    {
+        "img" : "img/main1.png",
+        "text" : "NEW",
+        "tit" : "네오 파운데이션_메트",
+        "name" : "얇고 촘촘한 구름결 커버",
+        "detail" : "#자연광커버 #48시간지속커버"
+    },
+    {
+        "img" : "img/main2.jpg",
+        "text" : "NEW",
+        "tit" : "얼티미스틱 아쿠아 틴트",
+        "name" : "아쿠아 틴트로 입술을 드로잉하다",
+        "detail" : "#스밈틴트 #아쿠아글로우"
+    },
+    {
+        "img" : "img/main3.png",
+        "text" : "NEW",
+        "tit" : "래디언-C 선크림",
+        "name" : "미백과 자외선을 한번에 해결할 수 있는 <br> 단 하나의 솔루션",
+        "detail" : "#잡티선크림 #비타민자차"
+    },
+    {
+        "img" : "img/main4.jpg",
+        "tit" : "네오쿠션",
+        "name" : "화제의 10관왕! <br> 한 번의 터치로 타고난 듯 완벽한 피부 완성",
+        "detail" : "#함부로묻지않게 #네오로밀착"
+    },
+    {
+        "img" : "img/main5.jpg",
+        "tit" : "BLUE MOVEMENT <br> FOR THE PLANET.",
+        "name" : "맑고 깨끗한 물의 생명력을 지키는<br>라네즈의 즐거운 변화의 시작"
+    }
+    ],
+    "container2" : [
+        {
+            "img" : "img/best seller1.png",
+            "tit" : "Cream Skin Refiner",
+            "name" : "크림 스킨",
+            "detail" : "스킨인데 뛰어난 보습지속력과, 산뜻한<br>사용감으로 이만한 스킨은 없는 것<br>같아요.",
+            "text" : "@rabb********"
+        },
+        {
+            "img" : "img/best seller2.png",
+            "tit" : "NEO CUSHION",
+            "name" : "네오 쿠션",
+            "detail" : "마스크때문에 매트한 쿠션 샀는데 지금까지 썼던<br>쿠션 중에 제일 마무리감이 좋았어요. ",
+            "text" : "@enji****"
+        },
+        {
+            "img" : "img/best seller3.png",
+            "tit" : "radian-C cream",
+            "name" : "래디언-C 크림",
+            "detail" : "벌써 3통째에요! 기미가 고민인 요즘 사용하려면 피부가 밝아지고 확실히 잡티가 옅어지네요.",
+            "text" : "@enji****"
+        },
+        {
+            "img" : "img/best seller4.png",
+            "tit" : "Water Sleeping Mask EX",
+            "name" : "워터 슬리핑 마스크 EX",
+            "detail" : "수분감 충만한 슬리핑팩! 밤에 듬뿍<br>바르고 자고 일어나면 아침에 화장이<br>매우 잘먹는다.",
+            "text" : "@heat*********"
+        },
+        {
+            "img" : "img/best seller5.png",
+            "tit" : "Lip Sleeping Mask EX",
+            "name" : "립 슬리핑 마스크 EX",
+            "detail" : "자기전 딱 바르고 나면 다음 날 입술<Br>컨디션이 넘넘 좋아져서 요즘 매일 사용<br>하고 있어요.",
+            "text" : "@cosm*********"
+        },
+        {
+            "img" : "img/best seller6.png",
+            "tit" : "Water Bank Hydro Essence",
+            "name" : "워터뱅크 하이드로 에센스",
+            "detail" : "얼굴도 속당김없이 여전히 촉촉하구요<br>재구매의사 100%에요 다들 정말<br>추천합니다",
+            "text" : "@blin****"
+        }
+    ]
+}
