@@ -7,6 +7,10 @@
     <title>Document</title>
     <link href="./font/Arita-dotum-Medium.woff" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <header>
@@ -25,14 +29,12 @@
                         <li><a href="">이벤트</a></li>
                     </ul>
                 </nav>
-                <ul>
-                </ul>
             </div>
             <div class="headerIcon">
                 <ul>
-                    <li><a href="https://www.laneige.com/kr/ko/misc/login/"><img src="img/icon-nav2.png"></a></li>
-                    <li><a href="https://www.laneige.com/kr/ko/misc/find-a-store/"><img src="img/icon-nav1.png">아이콘</a></li>
-                    <li><a><img src="img/icon-nav3.png">아이콘</a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/misc/login/" target="blank"><img src="img/icon-nav2.png"></a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/misc/find-a-store/" target="blank"><img src="img/icon-nav1.png">아이콘</a></li>
+                    <li class="icon"><a><img src="img/icon-nav3.png">아이콘</a></li>
                 </ul>
             </div>
         </div>
@@ -185,12 +187,13 @@
                         <p>올인원 톤업 크림</p>
                     </div>
                 </div>
+                <div></div>
             </div>
             <div class="iconsub">
                 <div class="iconall">
                     <div class="search">
                         <a><img src="./img/icon-nav4.png"></a>
-                        <input type="search" placeholder="검색어를 입력해 주세요">
+                        <input type="text" placeholder="검색어를 입력해 주세요">
                         <button type="reset"></button>
                         <button type="submit">검색</button>
                     </div>
@@ -210,16 +213,23 @@
     <section>
 
         <div class="container1">
-            <div class="con1">
-                <img src="img/main1.png">
-                <div class="text">
-                    <span>NEW</span>
-                    <p>네오 파운데이션_매트</p>
-                    <p>얇고 촘촘한 구름결 커버</p>
-                    <p>#자연광커버 #48시간지속커버</p>
+            <div class="con1all">
+                <div class="con">
+                    <!-- <img src="img/main1.png">
+                    <div class="text">
+                        <span>NEW</span>
+                        <p>네오 파운데이션_매트</p>
+                        <p>얇고 촘촘한 구름결 커버</p>
+                        <p>#자연광커버 #48시간지속커버</p>
+                    </div> -->
                 </div>
             </div>
+            <aside class="con1button">
+                <a><img src="./img/prev1.png"></a>
+                <a><img src="./img/next1.png"></a>
+            </aside>
         </div>
+        
         <div class="container2">
             <div class="con2">
                 <video autoplay muted loop poster="img/bestseller-bg.mp4"><source src="img/bestseller-bg.mp4"></video>
