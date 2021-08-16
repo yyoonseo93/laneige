@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./css/brand.css" rel="stylesheet">
+    <script defer src="./js/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/jquery-ui.min.js"></script>
+    <script defer src="./js/brand.js"></script>
 </head>
 <body>
     <header>
         <div class="header">
             <div class="headerLogo">
-                <a href="index.html"><img src="img/laneige-logo.svg">logo</a>
+                <a href="./index.html"><img src="img/laneige-logo.svg">logo</a>
             </div>
             <div class="headerNav">
                 <nav>
@@ -24,14 +27,12 @@
                         <li><a href="">이벤트</a></li>
                     </ul>
                 </nav>
-                <ul>
-                </ul>
             </div>
             <div class="headerIcon">
                 <ul>
-                    <li><a href="https://www.laneige.com/kr/ko/misc/login/"><img src="img/icon-nav2.png"></a></li>
-                    <li><a href="https://www.laneige.com/kr/ko/misc/find-a-store/"><img src="img/icon-nav1.png">아이콘</a></li>
-                    <li><a><img src="img/icon-nav3.png">아이콘</a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/misc/login/" target="blank"><img src="img/icon-nav2.png"></a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/misc/find-a-store/" target="blank"><img src="img/icon-nav1.png">아이콘</a></li>
+                    <li class="icon"><a><img src="img/icon-nav3.png">아이콘</a></li>
                 </ul>
             </div>
         </div>
@@ -184,12 +185,13 @@
                         <p>올인원 톤업 크림</p>
                     </div>
                 </div>
+                <div></div>
             </div>
             <div class="iconsub">
                 <div class="iconall">
                     <div class="search">
                         <a><img src="./img/icon-nav4.png"></a>
-                        <input type="search" placeholder="검색어를 입력해 주세요">
+                        <input type="text" placeholder="검색어를 입력해 주세요">
                         <button type="reset"></button>
                         <button type="submit">검색</button>
                     </div>
@@ -216,8 +218,8 @@
         <video><source src="img/new-wave-of-beauty-lg.mp4"></video>
     </div>
     
-    <section>
-        <div class="brandCon1">
+
+        <section class="brandCon1">
             <div class="brandcon1text">
                 <h2>LUMINOUS<br>BEAUTY</h2>
                 <p>수분 가득 맑고 건강하게 빛나는 아름다움과 새로운 뷰티를 통해 당신의 삶의 순간 순간을 빛나게 합니다.</p>
@@ -226,8 +228,8 @@
                     <a></a>
                 </div>
             </div>
-        </div>
-        <div class="brandCon2">
+        </section>
+        <section class="brandCon2">
             <div class="brconsub">
                 <div class="brConsub1">
                     <h2>MOISTURE<br>EXPERT</h2>
@@ -261,14 +263,14 @@
                     
                 </div>
             </div>
-        </div>
-        <div class="brandCon3">
+        </section>
+        <section class="brandCon3">
             <div>
                 <h2>MOISTURE<br>EXPERT</h2>
                 <p>라네즈는 ‘보습’이 모든 피부 문제 해결의<br> 근원이라는 관점으로,<br> 26년 간 피부 속 보습 메커니즘을<br> 연구해왔습니다.</p>
             </div>
-        </div>
-        <div class="brandCon4">
+        </section>
+        <section class="brandCon4">
             <div class="brandcon4sub">
                 <div class="brcon4sub1">
                     <span>CREATE</span>
@@ -277,8 +279,8 @@
                     
                 </div>
             </div>
-        </div>
-        <div class="brandCon5">
+        </section>
+        <section class="brandCon5">
             <div class="brandCon5text">
                 <h2>NEW WAVE OF<br>BEAUTY</h2>
                 <p>
@@ -289,8 +291,8 @@
             </div>
                 
             
-        </div>
-        <div class="brandCon6">
+        </section>
+        <section class="brandCon6">
             <div class="brcon6">
                 <div class="brcon6-1">
                     <h4>2019 Layering Lip Bar</h4>
@@ -333,8 +335,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="brandCon7">
+        </section>
+        <section class="brandCon7">
             <div class="brcon7">
                 <h1>LUMINOUS<br>LIFE</h1>
                 <div class="con7">
@@ -354,8 +356,8 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="brandCon8">
+        </section>
+        <section class="brandCon8">
             <div class="brcon8sub">
                 <h2>OUR HERITAGE</h2>
                 <p>
@@ -363,8 +365,8 @@
                     바로 라네즈가 추구하는 Luminous Beauty입니다.
                 </p>
             </div>
-        </div>
-        <div class="brandCon9">
+        </section>
+        <section class="brandCon9">
             <div class="con9img">
                 <img src="img/luminous-gradient-color.png">
             </div>
@@ -372,48 +374,48 @@
                 <p>더욱 빛나고 생기 넘치는 루미너스 스킨의 완성</p>
                 <h2>Luminous Beauty</h2>
             </div>
-        </div>
+        </section>
 
-    </section>
+ 
     
-    <footer>
-        <div class="footerTop">
-            <ul class="footerSub1">
-                <li><a href="https://www.apgroup.com/int/ko/" target="blank">회사소개</a></li>
-                <li><a href="https://www.beautypoint.co.kr/footer/agreement.do" target="blank">서비스이용약관</a></li>
-                <li><a href="https://www.laneige.com/kr/ko/regulation/ugc-terms-and-conditions.html" target="blank">UGC이용약관</a></li>
-                <li><a href="https://www.beautypoint.co.kr/footer/privacy.do" target="blank"><strong>개인정보처리방침</strong></a></li>
-                <li><a href="https://www.apgroup.com/int/ko/misc/cctv-policies-and-procedures/cctv-policies-and-procedures.html" target="blank">영상정보처리방침</a></li>
-                <li><a href="https://www.beautypoint.co.kr/beautypoint/about.do" target="blank">뷰티포인트</a></li>
-                <li><a href="https://www.laneige.com/kr/ko/misc/sitemap/" target="blank">사이트맵</a></li>
-                <li><a href="https://www.laneige.com/kr/ko/misc/news/" target="blank">공지사항</a></li>
-            </ul>
-            <div class="footerIcon">
-                <ul>
-                    <li><a href="img/icon-instagram.png"><img src="img/icon-instagram.png"></a></li>
-                    <li><a href="img/icon-facebook.png"><img src="img/icon-facebook.png"></a></li>
-                    <li><a href="img/icon-youtube.png"><img src="img/icon-youtube.png"></a></li>
+        <footer>
+            <div class="footerTop">
+                <ul class="footerSub1">
+                    <li><a href="https://www.apgroup.com/int/ko/" target="blank">회사소개</a></li>
+                    <li><a href="https://www.beautypoint.co.kr/footer/agreement.do" target="blank">서비스이용약관</a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/regulation/ugc-terms-and-conditions.html" target="blank">UGC이용약관</a></li>
+                    <li><a href="https://www.beautypoint.co.kr/footer/privacy.do" target="blank"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="https://www.apgroup.com/int/ko/misc/cctv-policies-and-procedures/cctv-policies-and-procedures.html" target="blank">영상정보처리방침</a></li>
+                    <li><a href="https://www.beautypoint.co.kr/beautypoint/about.do" target="blank">뷰티포인트</a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/misc/sitemap/" target="blank">사이트맵</a></li>
+                    <li><a href="https://www.laneige.com/kr/ko/misc/news/" target="blank">공지사항</a></li>
                 </ul>
-            </div>
-        </div>
-        <div class="footerBottom">
-            <div class="footerSub2">
-                <p>고객상담실 (수신자요금부담) 080-023-5454</p>
-                <span>운영시간 : 월-금 09:00 ~ 18:00</span>
-                <img src="img/wa-mark.png">
-                <div class="footeroption">
-                    <a>한국/한국어</a>
-                    <ul class="optionon">
-                        <li><a>international/english</a></li>
-                        <li><a>canada/english</a></li>
-                        <li><a>singapore/english</a></li>
+                <div class="footerIcon">
+                    <ul>
+                        <li><a href="img/icon-instagram.png"><img src="img/icon-instagram.png"></a></li>
+                        <li><a href="img/icon-facebook.png"><img src="img/icon-facebook.png"></a></li>
+                        <li><a href="img/icon-youtube.png"><img src="img/icon-youtube.png"></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footerSub3">
-                <p>© <strong>AMOREPACIFIC</strong> CORPORATION. ALL RIGHTS RESERVED.</p>
+            <div class="footerBottom">
+                <div class="footerSub2">
+                    <p>고객상담실 (수신자요금부담) 080-023-5454</p>
+                    <span>운영시간 : 월-금 09:00 ~ 18:00</span>
+                    <img src="img/wa-mark.png">
+                    <div class="footeroption">
+                        <a>한국/한국어</a>
+                        <ul class="optionon">
+                            <li><a>international/english</a></li>
+                            <li><a>canada/english</a></li>
+                            <li><a>singapore/english</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerSub3">
+                    <p>© <strong>AMOREPACIFIC</strong> CORPORATION. ALL RIGHTS RESERVED.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>

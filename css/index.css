@@ -576,6 +576,7 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
 
 .container1 {
   width: 100%;
+  height: 570px;
   margin-top: 58px;
   overflow: hidden;
   position: relative;
@@ -583,7 +584,6 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
 
 .container1 .con1all {
   width: 100%;
-  height: 570px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,9 +603,12 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
 
 .container1 .con1all > div .text {
   position: absolute;
-  left: 13%;
-  top: 33%;
+  left: 16%;
+  top: 32%;
   text-align: start;
+  opacity: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .container1 .con1all > div .text span {
@@ -635,6 +638,14 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   padding-top: 10px;
   font-size: 1em;
   color: #2b2b2b;
+}
+
+.container1 .con1all > div .slick-active .text {
+  opacity: 1;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  -webkit-transition: all .5s .4s;
+  transition: all .5s .4s;
 }
 
 .container1 .con1button a:nth-of-type(1) {
@@ -685,37 +696,50 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
 }
 
 .container2 .con2-2 {
-  width: 100%;
+  width: 80%;
   height: 80%;
-  margin: 0 auto;
   position: absolute;
-  left: 0;
+  left: 10%;
   top: 20%;
   overflow: hidden;
 }
 
 .container2 .con2-2 ul {
-  width: 80%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.container2 .con2-2 ul li {
+.container2 .con2-2 li {
   width: 33%;
   text-align: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  opacity: 0.5;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
 }
 
-.container2 .con2-2 ul li img {
+.container2 .con2-2 li:nth-of-type(2), .container2 .con2-2 li:nth-of-type(5) {
+  opacity: 0.5;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.container2 .con2-2 li img {
   width: 320px;
   height: 384px;
   -webkit-transform-origin: 50% 100%;
@@ -724,7 +748,7 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
           transform: rotate(0deg);
 }
 
-.container2 .con2-2 ul li img:hover {
+.container2 .con2-2 li img:hover {
   -webkit-animation: ani .2s 2 alternate;
           animation: ani .2s 2 alternate;
 }
@@ -743,29 +767,62 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   }
 }
 
-.container2 .con2-2 ul li h2 {
+.container2 .con2-2 li h2 {
   color: #4477BE;
   text-transform: uppercase;
   font-size: 1em;
   margin-top: 20px;
 }
 
-.container2 .con2-2 ul li span {
+.container2 .con2-2 li span {
   display: block;
   font-size: 1.1em;
   margin: 10px 0 40px 0;
   color: #2b2b2b;
 }
 
-.container2 .con2-2 ul li p {
+.container2 .con2-2 li p {
   font-size: 1em;
   line-height: 2;
   margin-bottom: 30px;
   color: #5f5f5f;
 }
 
-.container2 .con2-2 ul li p small {
+.container2 .con2-2 li p small {
   color: gray;
+}
+
+.container2 .con2-2 .active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.container2 .con2-2 .active:nth-of-type(2), .container2 .con2-2 .active:nth-of-type(5) {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.container2 .con2button a:nth-of-type(1) {
+  position: absolute;
+  left: 9%;
+  top: 50%;
+  z-index: 88;
+}
+
+.container2 .con2button a:nth-of-type(1) img {
+  width: 12px;
+}
+
+.container2 .con2button a:nth-of-type(2) {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+}
+
+.container2 .con2button a:nth-of-type(2) img {
+  width: 12px;
 }
 
 .container3 {
@@ -774,7 +831,7 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   margin-top: 200px;
 }
 
-.container3 .con3 {
+.container3 .con3Sub {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -787,15 +844,28 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
           justify-content: space-between;
 }
 
-.container3 .con3 li {
+.container3 .con3Sub li {
   width: 33%;
   overflow: hidden;
   padding-left: 60px;
   position: relative;
   word-break: keep-all;
+  opacity: 0.2;
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  -webkit-transform: translateY(380px);
+          transform: translateY(380px);
 }
 
-.container3 .con3 li h2 {
+.container3 .con3Sub li:nth-of-type(2) {
+  opacity: 0.2;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.container3 .con3Sub li h2 {
   position: absolute;
   left: 5%;
   top: 14%;
@@ -809,16 +879,16 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   letter-spacing: .05em;
 }
 
-.container3 .con3 li .imgText {
+.container3 .con3Sub li .imgText {
   width: 320px;
 }
 
-.container3 .con3 li .imgText img {
+.container3 .con3Sub li .imgText img {
   width: 100%;
   height: 525px;
 }
 
-.container3 .con3 li .imgText p {
+.container3 .con3Sub li .imgText p {
   font-size: 1.1em;
   line-height: 2;
   text-align: start;
@@ -826,7 +896,7 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   color: #2b2b2b;
 }
 
-.container3 .con3 li .imgText span {
+.container3 .con3Sub li .imgText span {
   display: block;
   font-size: 1em;
   line-height: 1.8;
@@ -834,9 +904,21 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   text-align: start;
 }
 
+.container3 .con3Sub .active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.container3 .con3Sub .active:nth-of-type(2) {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .container4 {
   width: 100%;
-  height: 1700px;
+  height: 100%;
   padding-top: 100px;
   margin-bottom: 100px;
   background: linear-gradient(140deg, #9dc0ed, #fcf4f6);
@@ -854,7 +936,7 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   pointer-events: none;
 }
 
-.container4 .con4 {
+.container4 .con4sub {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -863,18 +945,63 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.container4 .con4 .con4-1 {
+.container4 .con4sub > div {
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.container4 .con4sub > div:nth-of-type(2) {
+  opacity: 0.5;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+.container4 .con4sub > div:nth-of-type(3) {
+  opacity: 0.5;
+  -webkit-transition: 4s;
+  transition: 4s;
+  -webkit-transform: translateY(400px);
+          transform: translateY(400px);
+}
+
+.container4 .con4sub > div:nth-of-type(4) {
+  opacity: 0.5;
+  -webkit-transition: 5s;
+  transition: 5s;
+  -webkit-transform: translateY(500px);
+          transform: translateY(500px);
+}
+
+.container4 .con4sub .active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.container4 .con4sub .active:nth-of-type(2), .container4 .con4sub .active:nth-of-type(3), .container4 .con4sub .active:nth-of-type(4) {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.container4 .con4sub .con4-1 {
   width: 700px;
-  height: 730px;
+  height: 600px;
   padding-left: 45px;
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
 }
 
-.container4 .con4 .con4-1 > h2 {
+.container4 .con4sub .con4-1 > h2 {
   position: absolute;
   left: 1%;
   top: 15%;
@@ -887,30 +1014,30 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   letter-spacing: .05em;
 }
 
-.container4 .con4 .con4-1 .con4Text {
+.container4 .con4sub .con4-1 .con4Text {
   width: 660px;
   height: 500px;
   overflow: hidden;
 }
 
-.container4 .con4 .con4-1 .con4Text img {
+.container4 .con4sub .con4-1 .con4Text img {
   width: 100%;
   height: 420px;
 }
 
-.container4 .con4 .con4-1 .con4Text p {
+.container4 .con4sub .con4-1 .con4Text p {
   font-size: 1.1em;
   margin: 15px 0;
   color: #2b2b2b;
 }
 
-.container4 .con4 .con4-1 .con4Text span {
+.container4 .con4sub .con4-1 .con4Text span {
   font-size: 1em;
   margin: 10px 0;
   color: #5f5f5f;
 }
 
-.container4 .con4 .con4-2 {
+.container4 .con4sub .con4-2 {
   width: 470px;
   height: 730px;
   padding-left: 100px;
@@ -918,7 +1045,7 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   overflow: hidden;
 }
 
-.container4 .con4 .con4-2 h2 {
+.container4 .con4sub .con4-2 h2 {
   position: absolute;
   left: 13%;
   top: 16%;
@@ -931,39 +1058,39 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   letter-spacing: .05em;
 }
 
-.container4 .con4 .con4-2 .con4Text {
+.container4 .con4sub .con4-2 .con4Text {
   width: 470px;
   height: 730px;
 }
 
-.container4 .con4 .con4-2 .con4Text img {
+.container4 .con4sub .con4-2 .con4Text img {
   width: 367px;
   height: 630px;
 }
 
-.container4 .con4 .con4-2 .con4Text p {
+.container4 .con4sub .con4-2 .con4Text p {
   font-size: 1.1em;
   margin: 15px 0;
   color: #2b2b2b;
 }
 
-.container4 .con4 .con4-2 .con4Text span {
+.container4 .con4sub .con4-2 .con4Text span {
   font-size: 1em;
   line-height: 1.8;
   margin: 10px 0;
   color: #5f5f5f;
 }
 
-.container4 .con4 .con4-3 {
+.container4 .con4sub .con4-3 {
   width: 470px;
   height: 700px;
-  margin: 0 350px 50px 350px;
+  margin: 0;
   padding-left: 45px;
   position: relative;
   overflow: hidden;
 }
 
-.container4 .con4 .con4-3 h2 {
+.container4 .con4sub .con4-3 h2 {
   position: absolute;
   left: 1%;
   top: 13%;
@@ -976,24 +1103,70 @@ header .headerMenu .iconsub .iconall .recommend a:hover {
   letter-spacing: .05em;
 }
 
-.container4 .con4 .con4-3 .con4Text {
+.container4 .con4sub .con4-3 .con4Text {
   width: 430px;
   height: 700px;
   padding-right: 60px;
 }
 
-.container4 .con4 .con4-3 .con4Text img {
+.container4 .con4sub .con4-3 .con4Text img {
   width: 367px;
   height: 630px;
 }
 
-.container4 .con4 .con4-3 .con4Text p {
+.container4 .con4sub .con4-3 .con4Text p {
   font-size: 1.1em;
   margin: 15px 0;
   color: #2b2b2b;
 }
 
-.container4 .con4 .con4-3 .con4Text span {
+.container4 .con4sub .con4-3 .con4Text span {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #5f5f5f;
+}
+
+.container4 .con4sub .con4-4 {
+  width: 700px;
+  height: 730px;
+  margin-top: 30%;
+  padding-left: 45px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.container4 .con4sub .con4-4 > h2 {
+  position: absolute;
+  left: 1%;
+  top: 15%;
+  -webkit-transform: rotate(-90deg) translateY(100%);
+          transform: rotate(-90deg) translateY(100%);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  font-size: 1em;
+  color: #4477BE;
+  letter-spacing: .05em;
+}
+
+.container4 .con4sub .con4-4 .con4Text {
+  width: 660px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.container4 .con4sub .con4-4 .con4Text img {
+  width: 100%;
+  height: 420px;
+}
+
+.container4 .con4sub .con4-4 .con4Text p {
+  font-size: 1.1em;
+  margin: 15px 0;
+  color: #2b2b2b;
+}
+
+.container4 .con4sub .con4-4 .con4Text span {
   font-size: 1em;
   margin: 10px 0;
   color: #5f5f5f;
@@ -1173,6 +1346,13 @@ footer .footerBottom .footerSub2 .footeroption > a::after {
   width: 12px;
   height: 10px;
   margin-left: 135px;
+  -webkit-transform: translateY(0%) rotate(0deg);
+          transform: translateY(0%) rotate(0deg);
+}
+
+footer .footerBottom .footerSub2 .footeroption > a .active::after {
+  -webkit-transform: translateY(0%) rotate(180deg);
+          transform: translateY(0%) rotate(180deg);
 }
 
 footer .footerBottom .footerSub2 .footeroption .optionon {

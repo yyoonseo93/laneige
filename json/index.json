@@ -1,38 +1,5 @@
 {
-    "container1" : [
-    {
-        "img" : "img/main1.png",
-        "text" : "NEW",
-        "tit" : "네오 파운데이션_메트",
-        "name" : "얇고 촘촘한 구름결 커버",
-        "detail" : "#자연광커버 #48시간지속커버"
-    },
-    {
-        "img" : "img/main2.jpg",
-        "text" : "NEW",
-        "tit" : "얼티미스틱 아쿠아 틴트",
-        "name" : "아쿠아 틴트로 입술을 드로잉하다",
-        "detail" : "#스밈틴트 #아쿠아글로우"
-    },
-    {
-        "img" : "img/main3.png",
-        "text" : "NEW",
-        "tit" : "래디언-C 선크림",
-        "name" : "미백과 자외선을 한번에 해결할 수 있는 <br> 단 하나의 솔루션",
-        "detail" : "#잡티선크림 #비타민자차"
-    },
-    {
-        "img" : "img/main4.jpg",
-        "tit" : "네오쿠션",
-        "name" : "화제의 10관왕! <br> 한 번의 터치로 타고난 듯 완벽한 피부 완성",
-        "detail" : "#함부로묻지않게 #네오로밀착"
-    },
-    {
-        "img" : "img/main5.jpg",
-        "tit" : "BLUE MOVEMENT <br> FOR THE PLANET.",
-        "name" : "맑고 깨끗한 물의 생명력을 지키는<br>라네즈의 즐거운 변화의 시작"
-    }
-    ],
+
     "container2" : [
         {
             "img" : "img/best seller1.png",
