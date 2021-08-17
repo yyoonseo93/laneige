@@ -49,26 +49,10 @@ headIcon.addEventListener('click',function(){
     iconSub.classList.toggle('active');
 })
 
-//container1 버튼 클릭 이미지 슬라이드
-const con1Sub = document.querySelector('.con1all');
-const con1btn = document.querySelectorAll('.con1button a');
-let idx=0;
+//container1 이미지 슬라이드
 
-for(let i=0; i<con1btn.length; i++){
-    con1btn[i].addEventListener('click',function(){
-        if(i == 1){
-            if(idx < 4)idx++;
-        }else{
-            if(idx > 0)idx--;
-        }
-        let bt = con1Sub.offsetWidth * idx;
-        console.log(bt)
-        con1Sub.style = `transform:translateX(${-bt}px)`; 
-    });
-}
-//container1 이미지 slick slider
 $(".slider").slick({
-    arrows:false,
+    arrows:true,
     dots: true,
     infinite: true,
     slidesToShow: 1,
@@ -77,7 +61,22 @@ $(".slider").slick({
     autoplayspeed:200,
     fade: true,
     cssEase: 'linear'
+    // slickPlay 재생
+    // slickPause 일시정지
 });
+
+
+//container1 재생 일시중지 버튼 클릭
+
+const con1Play = document.querySelector('.play');
+const con1Pause = document.querySelector('.pause');
+
+con1Play.addEventListener('click',function(){
+    
+    con1Play.classList.remove('active');
+    con1Pause.classList.add('active');
+})
+
 
 //container2 버튼 클릭 이미지 슬라이드
 const con2Sub = document.querySelector('.con2sub');

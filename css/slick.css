@@ -117,11 +117,15 @@
 
 
 /*container-1*/
+
+/* con1 인디게이터 부분 */
 .slick-dots{
-    position: absolute;
-    left: 44%; bottom:10% ;
-    list-style: none;
     display: flex;
+    position: absolute;
+    left: 47%; bottom:5% ;
+    padding: 0;
+    z-index: 88;
+    list-style: none;
     align-items: center;
 }
 .slick-dots li button{
@@ -141,6 +145,7 @@
     border-radius: 12px;
     padding:0;
 }  
+/* con1 슬라이더부분 */
 .slider{
     width: 100%;
     display:  flex; 
@@ -150,5 +155,33 @@
 .slick-list img{width: 100%;}
 .slick-track{
     display: flex;
+}
+/* con1 버튼부분 */
+.con1all > button{
+    position: absolute;
+    z-index: 88;
+    bottom:5%;
+}
+.con1all > button.slick-prev{
+    left: 43%; font-size: 0;
+    background-color: transparent;
+    border-style: none;
+}
+.con1all > button.slick-prev::before{
+    content: '\e93b';
+    font-family: 'xeicon';
+    color: #2b2b2b;
+    font-size: 20px;
+}
+.con1all > button.slick-next{
+    right: 44%; font-size: 0;
+    background-color: transparent;
+    border-style: none;
+}
+.con1all > button.slick-next::before{
+    content: '\e93e';
+    font-family: 'xeicon';
+    color: #2b2b2b;
+    font-size: 20px;
 }
 /*container-1 end*/
