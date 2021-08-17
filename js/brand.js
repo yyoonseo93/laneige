@@ -19,3 +19,24 @@ $(window).on('mousewheel DOMMouseScroll',function(e){
 
     },200);
 });
+
+window.addEventListener('scroll',function(){
+
+const brandCon3 = document.querySelector('.brandCon3');
+const brandCon3H = document.querySelector('.brandCon3 h2');
+const brandCon3P = document.querySelector('.brandCon3 p');
+
+let winH = window.innerHeight;
+
+setTimeout(() => {
+    if(brandCon3 - winH <= window.scrollY && window.scrollY <= brandCon3){
+        brandCon3H.classList.add('active');
+        brandCon3P.classList.add('active');
+    }else{
+        brandCon3H.classList.remove('active');
+        brandCon3P.classList.remove('active');
+    };
+},300);
+
+});
+

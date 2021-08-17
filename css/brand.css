@@ -726,6 +726,15 @@ section {
   font-size: 3em;
   line-height: 1.3;
   letter-spacing: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.brandCon3 div .active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .brandCon3 div p {
@@ -734,6 +743,15 @@ section {
   line-height: 1.5;
   color: #444444;
   word-break: keep-all;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.brandCon3 div .active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .brandCon4 {
