@@ -41,6 +41,19 @@ for(let i=0; i<headNav.length; i++){
         });
 }
 
+//header 메뉴 숨기기
+
+$(window).scroll(function(){
+
+    if($(window).scrollTop() >= 58){
+        $('.header').addClass("scrollDown");
+    }else{
+        $('.header').removeClass("scrollDown")
+    }
+});
+
+
+
 //header 돋보기 클릭E
 const headIcon = document.querySelector('.icon');
 const iconSub = document.querySelector('.iconsub');
@@ -68,14 +81,17 @@ $(".slider").slick({
 
 //container1 재생 일시중지 버튼 클릭
 
-const con1Play = document.querySelector('.play');
-const con1Pause = document.querySelector('.pause');
-
-con1Play.addEventListener('click',function(){
+$('.play').on('click',function(){
+    $('.slider').slick('slickPlay');
+    $('.play').removeClass('active');
+    $('.pause').addClass('active');
     
-    con1Play.classList.remove('active');
-    con1Pause.classList.add('active');
-})
+});
+$('.pause').on('click',function(){
+    $('.slider').slick('slickPause');
+    $('.pause').removeClass('active');
+    $('.play').addClass('active');
+});
 
 
 //container2 버튼 클릭 이미지 슬라이드
@@ -158,7 +174,6 @@ for(let d=0; d<con4SubDiv.length; d++){
         con4SubDiv[d].classList.remove('active');
     }
 }
-
 });
     
 
@@ -167,12 +182,15 @@ for(let d=0; d<con4SubDiv.length; d++){
 $('.footeroption a').on('click',function(){
 
     if($(this).hasClass('active')){
-        $('.footeroption a').removeClass('active').find('ul').stop().slideUp();return;
-    }
         $('.footeroption a').removeClass('active').find('ul').stop().slideUp();
-        $(this).addClass('active').find('ul').stop().slideDown();
+        $('.optionon').removeClass('active').find('ul').stop().slideUp();
+        
+    }else{
+        $('.footeroption a').addClass('active').find('ul').stop().slideDown();
+        $('.optionon').addClass('active').find('ul').stop().slideDown();
+        
+    }
 })
-
 
 
 }
