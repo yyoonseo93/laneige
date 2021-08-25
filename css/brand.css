@@ -1023,8 +1023,8 @@ body {
   height: 280px;
   text-align: center;
   padding: 20px;
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
   -webkit-transition: .4s;
   transition: .4s;
 }
