@@ -158,12 +158,12 @@ body{overflow: hidden;}
     display:flex; align-items: center;
     justify-content: center;
 
-    div{border: 3px solid firebrick;
+    div{
         width: 500px; height: 280px;
         text-align: center;
         padding: 20px;
         transform: translateY(200px);
-        transition: .3s;
+        transition: .4s;
         h2{
             font-size: 3em;
             line-height: 1.3;

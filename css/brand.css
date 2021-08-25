@@ -1019,15 +1019,14 @@ body {
 }
 
 .brandCon3 div {
-  border: 3px solid firebrick;
   width: 500px;
   height: 280px;
   text-align: center;
   padding: 20px;
   -webkit-transform: translateY(200px);
           transform: translateY(200px);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .brandCon3 div h2 {

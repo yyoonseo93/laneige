@@ -85,11 +85,8 @@ for(let i=0; i<brCon2.length; i++){
 
 //con3 영상설정
 $('.brandCon3').on(function(){
-    delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -10
-    if(delta < 0){
-        video(0,false).stop().fadeOut();
-        $('.brandCon3 div').addClass('active');
-    }
+    video(0,true).stop().fadeOut();
+    $('.brandCon3 div').addClass('active');
     
 });
 
