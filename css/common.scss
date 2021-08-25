@@ -17,12 +17,22 @@ a{text-decoration: none;}
     box-sizing: border-box;
     font-family: 'Arita';
 }
+
+.loading{
+    width: 100%; height: 100%;
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff url('../img/loading.png') no-repeat center;
+    z-index: 60;
+}
+
 header{
     position: fixed;
     top: 0; left: 0;
     width: 100%; 
     transition: top .2s ease-in-out;
-    z-index: 999;
+    z-index: 40;
     &.active::after{
         content:'';
         position:fixed; left:0; top:0;
@@ -40,6 +50,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 20;
 
         .headerLogo{
             width: 130px; 
@@ -104,7 +115,7 @@ header{
         width: 100%;
         position: absolute;
         left: 0; top: 58px;
-        z-index: 99;
+        z-index: 10;
         display: block;
     
     .headerNav-sub{
@@ -204,12 +215,17 @@ header{
                     width: 260px; height: 300px;
                 }
                 h2{
-                    color: #4477be;
                     text-transform: uppercase;
                     font-size:1em;
                     margin:10px 0;
+                    a{
+                        color: #4477be;
+                    }
                 }
-                p{font-size:1em;}
+                p{
+                    font-size:1em;
+                    a{color: #000;}
+                }
             }
             
         }
@@ -265,12 +281,17 @@ header{
                     width: 260px; height: 300px;
                 }
                 h2{
-                    color: #4477be;
                     text-transform: uppercase;
                     font-size:1em;
                     margin:10px 0;
+                    a{
+                        color: #4477be;
+                    }
                 }
-                p{font-size:1em;}
+                p{
+                    font-size:1em;
+                    a{color: #000;}
+                }
             }
             
         }
@@ -326,28 +347,34 @@ header{
                     width: 260px; height: 300px;
                 }
                 h2{
-                    color: #4477be;
                     text-transform: uppercase;
                     font-size:1em;
                     margin:10px 0;
+                    a{
+                        color: #4477be;
+                    }
                 }
-                p{font-size:1em;}
+                p{
+                    font-size:1em;
+                    a{color: #000;}
+                }
             }
             
         }
     }
         .iconsub{
-            display: none;
+            transform: translateY(-380px);
+            transition: .5s;
             width: 100%; height: 300px;
             background: #f7f7f7;
             border-top: 1px solid #ddd;
             padding: 90px 0;
             position:absolute;
             left: 0; top: 0;
-            z-index: 99;
+            z-index: 8;
 
             &.active{ 
-                display: block;
+                transform: translateY(0px);
             }
 
             .iconall{
@@ -522,6 +549,7 @@ footer{
                 }
                 .optionon{
                     display: none;
+                    transition: .5s;
                     position: absolute;
                     right: 0%; bottom:100%;
                     width: 260px;
@@ -530,7 +558,7 @@ footer{
                     background-color: #fff;
                     padding:0 15px;
                     box-sizing: border-box;
-                    z-index: 99;
+                    z-index: 10;
                     li{
                         padding:10px 0;
                         a{

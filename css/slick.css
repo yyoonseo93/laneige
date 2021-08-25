@@ -124,7 +124,7 @@
     position: absolute;
     left: 47%; bottom:5% ;
     padding: 0;
-    z-index: 88;
+    z-index: 30;
     list-style: none;
     align-items: center;
 }
@@ -159,7 +159,7 @@
 /* con1 버튼부분 */
 .con1all > button{
     position: absolute;
-    z-index: 88;
+    z-index: 30;
     bottom:5%;
 }
 .con1all > button.slick-prev{

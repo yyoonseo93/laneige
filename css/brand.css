@@ -36,6 +36,18 @@ a {
   font-family: 'Arita';
 }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff url("../img/loading.png") no-repeat center;
+  z-index: 60;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -43,7 +55,7 @@ header {
   width: 100%;
   -webkit-transition: top .2s ease-in-out;
   transition: top .2s ease-in-out;
-  z-index: 999;
+  z-index: 40;
 }
 
 header.active::after {
@@ -74,6 +86,7 @@ header .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 20;
 }
 
 header .header .headerLogo {
@@ -153,7 +166,7 @@ header .headerMenu {
   position: absolute;
   left: 0;
   top: 58px;
-  z-index: 99;
+  z-index: 10;
   display: block;
 }
 
@@ -293,14 +306,21 @@ header .headerMenu .headerNav-sub .Nav-sub3 div:nth-of-type(2) img {
 }
 
 header .headerMenu .headerNav-sub .Nav-sub3 div:nth-of-type(2) h2 {
-  color: #4477be;
   text-transform: uppercase;
   font-size: 1em;
   margin: 10px 0;
 }
 
+header .headerMenu .headerNav-sub .Nav-sub3 div:nth-of-type(2) h2 a {
+  color: #4477be;
+}
+
 header .headerMenu .headerNav-sub .Nav-sub3 div:nth-of-type(2) p {
   font-size: 1em;
+}
+
+header .headerMenu .headerNav-sub .Nav-sub3 div:nth-of-type(2) p a {
+  color: #000;
 }
 
 header .headerMenu .headerNav-sub .Nav-sub4 {
@@ -378,14 +398,21 @@ header .headerMenu .headerNav-sub .Nav-sub4 div:nth-of-type(2) img {
 }
 
 header .headerMenu .headerNav-sub .Nav-sub4 div:nth-of-type(2) h2 {
-  color: #4477be;
   text-transform: uppercase;
   font-size: 1em;
   margin: 10px 0;
 }
 
+header .headerMenu .headerNav-sub .Nav-sub4 div:nth-of-type(2) h2 a {
+  color: #4477be;
+}
+
 header .headerMenu .headerNav-sub .Nav-sub4 div:nth-of-type(2) p {
   font-size: 1em;
+}
+
+header .headerMenu .headerNav-sub .Nav-sub4 div:nth-of-type(2) p a {
+  color: #000;
 }
 
 header .headerMenu .headerNav-sub .Nav-sub5 {
@@ -463,18 +490,28 @@ header .headerMenu .headerNav-sub .Nav-sub5 div:nth-of-type(2) img {
 }
 
 header .headerMenu .headerNav-sub .Nav-sub5 div:nth-of-type(2) h2 {
-  color: #4477be;
   text-transform: uppercase;
   font-size: 1em;
   margin: 10px 0;
+}
+
+header .headerMenu .headerNav-sub .Nav-sub5 div:nth-of-type(2) h2 a {
+  color: #4477be;
 }
 
 header .headerMenu .headerNav-sub .Nav-sub5 div:nth-of-type(2) p {
   font-size: 1em;
 }
 
+header .headerMenu .headerNav-sub .Nav-sub5 div:nth-of-type(2) p a {
+  color: #000;
+}
+
 header .headerMenu .iconsub {
-  display: none;
+  -webkit-transform: translateY(-380px);
+          transform: translateY(-380px);
+  -webkit-transition: .5s;
+  transition: .5s;
   width: 100%;
   height: 300px;
   background: #f7f7f7;
@@ -483,11 +520,12 @@ header .headerMenu .iconsub {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 99;
+  z-index: 8;
 }
 
 header .headerMenu .iconsub.active {
-  display: block;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 header .headerMenu .iconsub .iconall {
@@ -710,6 +748,8 @@ footer .footerBottom .footerSub2 .footeroption > a.active::after {
 
 footer .footerBottom .footerSub2 .footeroption .optionon {
   display: none;
+  -webkit-transition: .5s;
+  transition: .5s;
   position: absolute;
   right: 0%;
   bottom: 100%;
@@ -720,7 +760,7 @@ footer .footerBottom .footerSub2 .footeroption .optionon {
   padding: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 99;
+  z-index: 10;
 }
 
 footer .footerBottom .footerSub2 .footeroption .optionon li {
@@ -749,24 +789,26 @@ body {
   overflow: hidden;
 }
 
-.allvideo {
-  display: none;
-}
-
 .allvideo video {
+  display: none;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: -1;
   left: 0;
   top: 0;
-  z-index: -1;
-  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.allvideo video.active {
+  display: block;
 }
 
 .brandCon1 {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  padding-top: 200px;
+  padding-top: 250px;
 }
 
 .brandCon1 .brandcon1text {
@@ -798,7 +840,7 @@ body {
   -webkit-transform-origin: 0;
           transform-origin: 0;
   position: relative;
-  left: 20%;
+  left: 15%;
 }
 
 .brandCon1 .brandcon1text .scroll p {
@@ -835,7 +877,6 @@ body {
 .brandCon2 {
   width: 100%;
   height: 100vh;
-  position: relative;
 }
 
 .brandCon2 .brconsub {
@@ -854,8 +895,7 @@ body {
 }
 
 .brandCon2 .brconsub .brCon2 {
-  height: 100%;
-  padding-top: 100px;
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -879,17 +919,25 @@ body {
 
 .brandCon2 .brconsub .brCon2 > p {
   opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
   margin: 10px 0;
   font-size: 1em;
   line-height: 1.5;
   color: #444444;
 }
 
-.brandCon2 .brconsub > p .active {
+.brandCon2 .brconsub .active > p {
   opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 .brandCon2 .brconsub .ho2 {
+  position: absolute;
+  left: 0;
+  top: 55px;
+  width: 100%;
   padding: 30px 10px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -897,19 +945,21 @@ body {
   -webkit-transition: .3s;
   transition: .3s;
   text-align: center;
-  border-right: 1px solid #fff;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: .6s;
+  transition: .6s;
   opacity: 0;
 }
 
-.brandCon2 .brconsub .ho2 > p {
+.brandCon2 .brconsub .ho2 > span {
+  display: block;
   margin: 10px 0;
   font-size: 1em;
   line-height: 1.5;
   color: #444444;
   -webkit-transition: .2s;
   transition: .2s;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
 }
 
 .brandCon2 .brconsub .ho2 > a {
@@ -928,7 +978,7 @@ body {
   width: 0%;
   border-bottom: 2px solid #444444;
   position: absolute;
-  left: 150px;
+  left: 100px;
   bottom: 45px;
   -webkit-animation: ho 1s infinite;
           animation: ho 1s infinite;
@@ -969,10 +1019,15 @@ body {
 }
 
 .brandCon3 div {
+  border: 3px solid firebrick;
   width: 500px;
   height: 280px;
   text-align: center;
   padding: 20px;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .brandCon3 div h2 {
@@ -981,8 +1036,6 @@ body {
   letter-spacing: 5px;
   -webkit-transition: .5s;
   transition: .5s;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
 }
 
 .brandCon3 div p {
@@ -991,8 +1044,9 @@ body {
   line-height: 1.5;
   color: #444444;
   word-break: keep-all;
-  -webkit-transition: .5s;
-  transition: .5s;
+}
+
+.brandCon3 .active {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
