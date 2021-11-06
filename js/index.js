@@ -100,22 +100,22 @@ window.addEventListener('scroll',function(){
 
 
 //container4 이미지 transition
-const sect = document.querySelector('.all'); //전체배경
+//const sect = document.querySelector('.all'); //전체배경
 const contai4 = document.querySelector('.container4');
 const con4SubDiv = document.querySelectorAll('.con4sub div');
 
 for(let d=0; d<con4SubDiv.length; d++){
     let FromSub = contai4.getBoundingClientRect().top;
-    console.log(FromSub)
+    //console.log(FromSub)
     
     if(FromSub-winH < 0){
         con4SubDiv[d].classList.add('active');
-        sect.classList.add('active');
+        //sect.classList.add('active');
         
     }else if(FromSub-winH > 0){
     
         con4SubDiv[d].classList.remove('active');
-        sect.classList.remove('active');
+        //sect.classList.remove('active');
         
     }
 }
